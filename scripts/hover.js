@@ -5,18 +5,41 @@ $(document).ready(function(){
 //    $('#fatihah').maphilight();  
     $('#fatihah').maphilight().parent().addClass('center-map');
     
-    var present = false;
-    
-    $('#ayat2-area').click(function(e){
-        e.preventDefault();
-        console.log('2 clicked!');
-        $('#ayat2-text').show(3000);
-    })
-    
-    $('#ayat3-2-area').click(function(e){
-        e.preventDefault();
-        console.log('3-2 clicked!');
-    })
+	$('area').click(function(e){
+		e.preventDefault()
+		var ayatnumber = $(this).attr('class');
+		ayatnumber = ayatnumber.split('-')[0];
+		if(!$('#'+ayatnumber+'-text').is(":visible")){
+			$('#'+ayatnumber+'-text').show(300).siblings("p").hide();
+		}
+		
+		
+		
+		console.log(ayatnumber);
+		
+	})
+	
+	var hovered = false;
+	
+	$('area').mouseover(function(e){
+		e.preventDefault();
+		var ayatnumber = $(this).attr('class');
+		ayatnumber = ayatnumber.split('-')[0];
+		if(hovered === false){
+			hovered = true;
+			$('.'+ayatnumber+'-area').mouseover();
+		}
+		
+	})
+	
+	$('area').mouseleave(function(e){
+		hovered = false;
+	})
+	
+	
+	
+		
+
     
     
 })
