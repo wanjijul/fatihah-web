@@ -1,0 +1,32 @@
+#fatihah {
+    max-width:848px;
+    max-height:1274px;
+    width: 500px;;
+/*    margin: 25%;*/
+}
+
+/*
+#fatihah-container {
+    margin: 25%;
+    border-style: dashed;
+    width: ;
+    height:
+        
+}
+*/
+
+#middle {
+    border-style: dotted;
+    border-width: 2px;
+}
+
+
+.center-map {
+    margin: 0 auto;
+/*    margin-left: 200px;*/
+    width: 424px;
+}
+
+p {
+	height: 100%;
+}
