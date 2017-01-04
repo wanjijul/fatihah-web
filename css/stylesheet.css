@@ -1,9 +1,20 @@
 #fatihah {
     max-width:848px;
     max-height:1274px;
-    width: 500px;;
+    height: 90vh;
+    
 /*    margin: 25%;*/
 }
+
+.panel-heading {
+    background: #005A04 !important; color: #fff;
+} 
+
+
+.panel-default {
+    background: #CCFFBB !important; color: #fff; 
+} 
+
 
 /*
 #fatihah-container {
@@ -15,18 +26,68 @@
 }
 */
 
-#middle {
-    border-style: dotted;
-    border-width: 2px;
+body {
+    background-attachment: fixed;
+    background: url(../images/background.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;;
 }
 
 
+#middle-section {
+/*    position: relative;*/
+}
+
+div.col-md-2 {
+    height: 100vh;
+}
+
 .center-map {
     margin: 0 auto;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    
 /*    margin-left: 200px;*/
     width: 424px;
 }
 
 p {
 	height: 100%;
+}
+
+#main-tafsir-section {
+    margin-top: 50px;
+    min-height: 40vh;
+    
+}
+
+
+
+.panel-content {
+    max-height: 30vh;
+    overflow-y: scroll;
+}
+
+.btn-group {
+    // center
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+
+
+#sub-ayat-elab-section {
+    margin-bottom: 50px;
+}
+
+.btn {
+    border-radius: 90px !important;
+}
+
+.test {
+    border: 4px dashed;
 }
