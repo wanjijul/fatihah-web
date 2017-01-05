@@ -1,20 +1,27 @@
 #fatihah {
     max-width:848px;
     max-height:1274px;
-    height: 90vh;
+    height: 80vh;
     
 /*    margin: 25%;*/
 }
 
 .panel-heading {
-    background: #005A04 !important; color: #fff;
+    /*background: #005A04 !important; color: #fff;*/
 } 
 
 
 .panel-default {
-    background: #CCFFBB !important; color: #fff; 
+    /*background: #CCFFBB !important; color: #fff; */
 } 
 
+.panel {
+    border-radius: 15px !important;    
+}
+
+#top-nav {
+    margin-top: 20px;
+}
 
 /*
 #fatihah-container {
@@ -25,6 +32,12 @@
         
 }
 */
+
+#show-area {
+    /*max-width: 30vh;
+    border-style: dotted;*/
+   
+}
 
 body {
     background-attachment: fixed;
@@ -66,12 +79,20 @@ p {
 
 
 .panel-content {
-    max-height: 30vh;
+    max-height: 30vh;    
     overflow-y: scroll;
 }
 
 .btn-group {
     // center
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+.apply-center {
+     // center
   position: absolute;
   top: 50%;
   left:50%;
@@ -85,7 +106,7 @@ p {
 }
 
 .btn {
-    border-radius: 90px !important;
+    border-radius: 2px !important;
 }
 
 .test {
