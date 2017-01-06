@@ -1,13 +1,22 @@
 #fatihah {
     max-width:848px;
     max-height:1274px;
-    height: 90vh;    
+    height: 90vh;  
+    opacity: 0.6;
+    filter: alpha(opacity=50);
+
 
     
 }
 
 #fatihah-container {
     
+}
+.img-circle {
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #c9ff72;
+    border-width: 5px;
 }
 
 .panel-heading {
@@ -17,7 +26,11 @@
 
 .panel-default {
     /*background: #CCFFBB !important; color: #fff; */
-        background-color: rgba(255,255,255,0.5) !important;
+    background-color: rgba(255,255,255,0.5) !important;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: #c9ff72;
+    border-width: 3px;
 } 
 
 .panel {
@@ -74,6 +87,10 @@ p {
 	height: 100%;
 }
 
+.button-container {
+    display: block;
+}
+
 #main-tafsir-section {
     margin-top: 50px;
     min-height: 40vh;
@@ -84,7 +101,7 @@ p {
 
 .panel-content {
     max-height: 30vh;    
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 
