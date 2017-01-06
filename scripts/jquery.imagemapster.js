@@ -2740,9 +2740,9 @@ A jQuery plugin to enhance image maps.
         // mouseover events are ignored entirely while resizing, though we do care about mouseout events
         // and must queue the action to keep things clean.
 
-        if (!ar || ar.isNotRendered() || ar.owner.currentAction) {
-            return;
-        }
+        // if (!ar || ar.isNotRendered() || ar.owner.currentAction) {
+        //     return;
+        // }
 
         if (me.currentAreaId === ar.areaId) {
             return;

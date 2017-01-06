@@ -1,25 +1,36 @@
 
 
+ 
+
+$('#fatihah').mapster({
+	render_highlight: {
+		fillOpacity: 0.4,
+	    fillColor: "6aff3d",
+	},	
+
+	render_select: {
+		fillOpacity: 0.4,
+	    fillColor: "d42e16",
+	    stroke: true,
+	    strokeColor: "3320FF",
+	    strokeOpacity: 0.8,
+	    strokeWidth: 4
+	},	
+
+    singleSelect: true,
+    mapKey: 'name',
+    listKey: 'name',
+});
+
 $(document).ready(function(){
     // $('map').imageMapResize();
 //    $('#fatihah').maphilight();  
     // $('#fatihah').maphilight().parent().addClass('center-map');
  
-    var image = $('#fatihah');
+   
 
-    $('#fatihah').mapster({
-    	mapKey: 'name',
-    	singleSelect: true,
-        fillOpacity: 0.6,
-        fillColor: 'FF0000',
-    	onMouseover: function(e, opt, key, selected){
-    		console.log(e);
-   //  		var ayatnumber = event;
-			// ayatnumber = ayatnumber.split('-')[0];
-			// console.log(ayatnumber);
-   //  		$('area[name=' + ayatnumber + '-area]').mouseenter();
-	    }
-    })
+   
+
 
 
 
@@ -40,6 +51,8 @@ $(document).ready(function(){
 	
 	var hovered = false;
 	var current_hovered_object_id = "";
+
+
 
 	// $('area').mouseover(function(e){
 	// 	e.preventDefault();
