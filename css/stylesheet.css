@@ -9,6 +9,10 @@
     
 }
 
+#contents {
+    margin-top: 6vh;
+}
+
 #fatihah-container {
     
 }
@@ -37,7 +41,19 @@
     /*border-radius: 15px !important;    */
 }
 
+#feedback-input {
+  
+}
 
+.form-group {
+    margin-top: 15px;
+    
+    
+}
+
+.form-control {
+    margin-top: 10px;
+}
 
 #top-nav {
     margin-top: 20px;
@@ -52,6 +68,10 @@
         
 }
 */
+
+#feedback-button {
+    margin-left: 10px;
+}
 
 #show-area {
     /*this makes it fill the whole right area beside image*/
@@ -104,8 +124,13 @@ p {
     overflow-y: auto;
 }
 
+.share-icon {
+    width: 5px;
+}
 
-
+.popover {
+    max-width: 1000px;
+}
 
 .btn-group {
     // center
@@ -131,6 +156,7 @@ p {
 
 .btn {
     border-radius: 2px !important;
+    margin-top: 7px;
 }
 
 .test {
