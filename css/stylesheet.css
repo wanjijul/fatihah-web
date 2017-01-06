@@ -1,9 +1,13 @@
 #fatihah {
     max-width:848px;
     max-height:1274px;
-    height: 80vh;
+    height: 90vh;    
+
     
-/*    margin: 25%;*/
+}
+
+#fatihah-container {
+    
 }
 
 .panel-heading {
@@ -13,11 +17,14 @@
 
 .panel-default {
     /*background: #CCFFBB !important; color: #fff; */
+        background-color: rgba(255,255,255,0.5) !important;
 } 
 
 .panel {
-    border-radius: 15px !important;    
+    /*border-radius: 15px !important;    */
 }
+
+
 
 #top-nav {
     margin-top: 20px;
@@ -34,8 +41,9 @@
 */
 
 #show-area {
-    /*max-width: 30vh;
-    border-style: dotted;*/
+    /*this makes it fill the whole right area beside image*/
+    float: none;
+    display: table-cell;
    
 }
 
@@ -48,10 +56,6 @@ body {
     background-size: cover;;
 }
 
-
-#middle-section {
-/*    position: relative;*/
-}
 
 div.col-md-2 {
     height: 100vh;

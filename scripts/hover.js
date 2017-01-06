@@ -2,7 +2,17 @@
 
  
 
-$('#fatihah').mapster({
+
+
+$(document).ready(function(){
+    // $('map').imageMapResize();
+//    $('#fatihah').maphilight();  
+    // $('#fatihah').maphilight().parent().addClass('center-map');
+ 
+
+	$('#fatihah-container').width($('#fatihah').width());   
+
+   	$('#fatihah').mapster({
 	render_highlight: {
 		fillOpacity: 0.4,
 	    fillColor: "6aff3d",
@@ -20,16 +30,7 @@ $('#fatihah').mapster({
     singleSelect: true,
     mapKey: 'name',
     listKey: 'name',
-});
-
-$(document).ready(function(){
-    // $('map').imageMapResize();
-//    $('#fatihah').maphilight();  
-    // $('#fatihah').maphilight().parent().addClass('center-map');
- 
-   
-
-   
+	});
 
 
 
