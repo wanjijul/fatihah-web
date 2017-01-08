@@ -5,11 +5,54 @@
 
 
 $(document).ready(function(){
-    // $('map').imageMapResize();
-//    $('#fatihah').maphilight();  
-    // $('#fatihah').maphilight().parent().addClass('center-map');
- 
-    var share_content = '<span><a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a><a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebtttons" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a><a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />    </a><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn" /></a><a href="http://www.tumblr.com/share/link?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank"><img src="https://simplesharebuttons.com/images/somacro/tumblr.png" alt="Tumblr" /></a></span>'
+
+//     $('#feedback-submit').on('submit', function(e){
+//        e.preventDefault();
+//        $.ajax({
+//            url: /here/,
+//            type: 'POST', //or POST
+//            data: $('#feedback-message').serialize(),
+//            success: function(data){
+//                 console.log('successfully submitted');
+//            }
+//        });
+//    });
+  
+    
+    var share_content = '<div class="container-fluid"><a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a><a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebtttons" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a><a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" /></a><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn"/></a><a href="http://www.tumblr.com/share/link?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/tumblr.png" alt="Tumblr" /></a></div>'
+    
+
+    
+    $('#feedback-submit').on('click', function(e){
+        e.preventDefault();
+
+        // information to be sent to the server
+        var info = $('#feedback-message').val();
+        var contact_addr = $('#contact-address').val();
+        var title = $('#feedback-title').val();
+
+        $.ajax({
+            type: "POST",
+            url: '/xillia.com/email.php',
+            data: {
+                message: info,
+                contact: contact_addr,
+                title: title
+                  
+                  },
+            success: function(data, textStatus, jqXHR) {
+                $('#success-alert').show(200).css('display', 'inline');
+            } ,
+            error: function(jqXHR, status, error) {
+                console.log(status + ": " + error);
+            }
+        });
+    })
+    
+    $(".modal").on("hidden.bs.modal", function(){
+        $("textarea").val('');
+        $("#success-alert").hide();
+    });
     
     $('#share-button').popover({
         placement: 'bottom',
@@ -21,6 +64,7 @@ $(document).ready(function(){
     
 	$('#fatihah-container').width($('#fatihah').width());   
 
+    
     
    	$('#fatihah').mapster({
 	render_highlight: {

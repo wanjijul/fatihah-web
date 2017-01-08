@@ -28,15 +28,29 @@
                 <label for="feedback-title">Title</label>
                 <textarea class="form-control" id="feedback-title" name="feedback-title" rows="1"></textarea>        
               </div>  
+          <div class="form-group">
+                <label for="contact-address">Contact Information</label>
+                <textarea class="form-control" id="contact-address" name="contact-address" rows="1"></textarea>        
+              </div>  
             <div class="form-group">
-                <label for="feedback-message">Feedback Message</label>
-                <textarea class="form-control" id="feedback-message" name="feedback-message" rows="10"></textarea>              
+                    <label for="feedback-message">Feedback Message</label>
+                    <textarea class="form-control"  name="feedback-message" id="feedback-message" rows="10"></textarea>              
+                
+                
               </div>
             
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-info" onClick="submitAction('email.php')">Submit</button>
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <div class="container-fluid">
+                  <div class="alert alert-success" id="success-alert">
+                  <strong>Thanks</strong> for the message! Please spread the word.
+                    </div>
+                <button type="submit" id="feedback-submit" class="btn btn-info">Submit</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        
+              </div>
+                        
+              
           </div>
         </div>
 

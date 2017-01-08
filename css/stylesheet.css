@@ -9,6 +9,13 @@
     
 }
 
+#success-alert {
+    width: 50px;
+    display: none;
+    margin-right: 20px;
+    
+}
+
 #contents {
     margin-top: 50px;
 }
@@ -107,15 +114,10 @@
     margin-top: 20px;
 }
 
-/*
-#fatihah-container {
-    margin: 25%;
-    border-style: dashed;
-    width: ;
-    height:
-        
+
+#icon-container {
+    width: 400px;
 }
-*/
 
 #feedback-button {
     margin-left: 15px;
@@ -170,6 +172,10 @@ p {
 }
 
 
+div.popover-content {
+    width: auto;
+    height: 60px;
+}
 
 .panel-content {
 /*    max-height: 30vh;    */
@@ -177,12 +183,13 @@ p {
 }
 
 .share-icon {
-    width: 5px;
+    float: left;
+    width: 50px;
+    margin-bottom: 15px;
+    margin-right: 10px;
 }
 
-.popover {
-    max-width: 1000px;
-}
+
 
 .btn-group {
     // center
