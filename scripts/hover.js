@@ -13,7 +13,7 @@ $(document).ready(function(){
     
     $('#share-button').popover({
         placement: 'bottom',
-        trigger: 'hover',
+        trigger: 'click',
         html: 'true',
         content: share_content
     });
@@ -44,19 +44,25 @@ $(document).ready(function(){
 
 
 
+    var current_clicked_area = "";
 
-
-	$('area').click(function(e){
+    
+	$('area, li > a').click(function(e){
 		e.preventDefault()
-		var ayatnumber = $(this).attr('class');
-		ayatnumber = ayatnumber.split('-')[0];
+		var class_name = $(this).attr('class');
+        
+		var ayatnumber = class_name.split('-')[0];
 		if(!$('#'+ayatnumber+'-text').is(":visible")){
 			$('#'+ayatnumber+'-text').show(300).siblings("p").hide();
 		}
 		
+        if($(this).prop('tagName') === 'A' && current_clicked_area != class_name){
+            $('area[class='+class_name+']').click();
+            current_clicked_area = class_name;
+        }
 		
 		
-		console.log(ayatnumber);
+		console.log($(this).prop('tagName'));
 		
 	})
 	

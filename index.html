@@ -26,16 +26,16 @@
           <div class="modal-body">
             <div class="form-group">
                 <label for="feedback-title">Title</label>
-                <textarea class="form-control" id="feedback-title" rows="1"></textarea>        
+                <textarea class="form-control" id="feedback-title" name="feedback-title" rows="1"></textarea>        
               </div>  
             <div class="form-group">
                 <label for="feedback-message">Feedback Message</label>
-                <textarea class="form-control" id="feedback-message" rows="10"></textarea>              
+                <textarea class="form-control" id="feedback-message" name="feedback-message" rows="10"></textarea>              
               </div>
             
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-info" >Submit</button>
+            <button type="button" class="btn btn-info" onClick="submitAction('email.php')">Submit</button>
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           </div>
         </div>
@@ -44,25 +44,42 @@
     </div>
 
       <div class="container-fluid">
-          <div class="row-fluid">
-            <nav class="navbar navbar-inverse navbar-fixed-top">  
-            <div class="container-fluid">
-             <ul class="nav navbar-nav">
-                <li><a href="#">Bismillah</a></li>
-                <li><a href="#">Ayat 1</a></li>
-                <li><a href="#">Ayat 2</a></li>
-                <li><a href="#">Ayat 3</a></li>
-                <li><a href="#">Ayat 4</a></li>
-                <li><a href="#">Ayat 5</a></li>
-                <li><a href="#">Ayat 6</a></li>
-                <li><a href="#">Ayat 7</a></li>
-              </ul>
-                <button type="button" 
-                        class="btn btn-secondary navbar-button"
+          <div class="row-fluid ">
+            <nav class="navbar navbar-fixed-top navbar-default transparent">  
+            <div class="container-fluid top-bar" >
+             <ul class="nav navbar-nav transparent">
+                <li><a href="#" class="ayat1-area">Bismillah</a></li>
+                <li><a href="#" class="ayat2-area">Ayat 2</a></li>
+                <li><a href="#" class="ayat3-area">Ayat 3</a></li>
+                <li><a href="#" class="ayat4-area">Ayat 4</a></li>
+                <li><a href="#" class="ayat5-area">Ayat 5</a></li>
+                <li><a href="#" class="ayat6-area">Ayat 6</a></li>
+                <li><a href="#" class="ayat7-area">Ayat 7</a></li>
+                 
+                 <li> 
+                     <button type="button" 
+                        class="btn btn-success navbar-button"
                         data-toggle="popover" id="share-button">Share</button>
-                <button type="button" 
-                        class="btn btn-secondary navbar-button"
+                 </li>
+                 <li>
+                        <button type="button" 
+                        class="btn btn-success navbar-button"
                         data-toggle="modal" data-target="#feedback-modal" id="feedback-button">Feedback</button>
+                 </li>
+                 
+                 <li > <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top" style="height: 10px">
+                    <input type="hidden" name="cmd" value="_s-xclick" >
+                    <input type="hidden" name="hosted_button_id" value="MCTZEXGPKVQK4">
+                     <div id="donate-image">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!" > 
+                     </div>
+                    
+                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1" >
+                </form>        
+                 </li>
+              </ul>
+           
+   
                 
             </div>         
         </nav>

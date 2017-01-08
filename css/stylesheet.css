@@ -10,21 +10,69 @@
 }
 
 #contents {
+    margin-top: 50px;
+}
+
+
+#donate-image {
+    margin-top: 25px;
+    margin-left: 15px;
+    height: 2px;
+}
+
+#contents {
     margin-top: 6vh;
 }
 
 #fatihah-container {
-    
+    margin-top: 3vh;
 }
 .img-circle {
     border-radius: 10px;
     border-style: solid;
-    border-color: #c9ff72;
-    border-width: 5px;
+    border-color: #7FBCEA;
+    border-width: 4px;
+}
+
+.navbar-nav {
+  float: none;
+  text-align: center;
+  padding-bottom: 10px;
+/*    height: 3px;*/
+    
+}
+
+.transparent {
+    background-color: rgba(0, 0, 0, 0);
+    background-image: none  !important;
+    border: none;
+}
+
+.top-bar {
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 0px solid  #c9ff72 !important;
+/*    border-radius: 10px !important;*/
+    
+}
+
+.navbar-default {
+    
+}
+
+.navbar-nav li {
+  float: none;
+  display: inline-block;
+    ; 
+  
 }
 
 .panel-heading {
     /*background: #005A04 !important; color: #fff;*/
+    border-radius: 5px;
+    border-top: 3px solid #7FBCEA;
+    border-left: 3px solid #7FBCEA;
+    border-right: 3px solid #7FBCEA;
+  
 } 
 
 
@@ -33,7 +81,7 @@
     background-color: rgba(255,255,255,0.5) !important;
     border-radius: 10px;
     border-style: solid;
-    border-color: #c9ff72;
+    border-color: #7FBCEA;
     border-width: 3px;
 } 
 
@@ -70,7 +118,11 @@
 */
 
 #feedback-button {
-    margin-left: 10px;
+    margin-left: 15px;
+}
+
+#share-button {
+    margin-left: 8px;
 }
 
 #show-area {
@@ -120,7 +172,7 @@ p {
 
 
 .panel-content {
-    max-height: 30vh;    
+/*    max-height: 30vh;    */
     overflow-y: auto;
 }
 
@@ -152,13 +204,15 @@ p {
 
 #sub-ayat-elab-section {
     margin-bottom: 50px;
+    min-height: 40vh;
 }
 
-.btn {
-    border-radius: 2px !important;
-    margin-top: 7px;
+
+#media {
+    min-height: 40vh;
 }
+
 
 .test {
-    border: 4px dashed;
+/*    border: 4px dashed;*/
 }
