@@ -68,7 +68,7 @@ $(document).ready(function(){
     
    	$('#fatihah').mapster({
 	render_highlight: {
-		fillOpacity: 0.4,
+		fillOpacity: 0.6,
 	    fillColor: "6aff3d",
 	},	
 
@@ -81,32 +81,39 @@ $(document).ready(function(){
 	    strokeWidth: 4
 	},	
 
+    noHrefIsMask: false,
     singleSelect: true,
-    mapKey: 'name',
+    mapKey: 'class',
     listKey: 'name',
+     
+    
 	});
 
-
+    
 
     var current_clicked_area = "";
-
+    
+    
+    
     
 	$('area, li > a').click(function(e){
-		e.preventDefault()
+		e.preventDefault();
+      
 		var class_name = $(this).attr('class');
         
 		var ayatnumber = class_name.split('-')[0];
 		if(!$('#'+ayatnumber+'-text').is(":visible")){
 			$('#'+ayatnumber+'-text').show(300).siblings("p").hide();
 		}
-		
+    	
         if($(this).prop('tagName') === 'A' && current_clicked_area != class_name){
-            $('area[class='+class_name+']').click();
+            $('area[class='+class_name+']').mapster('select');
+            console.log('area[class='+class_name+']')
             current_clicked_area = class_name;
         }
 		
 		
-		console.log($(this).prop('tagName'));
+		
 		
 	})
 	
