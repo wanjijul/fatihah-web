@@ -223,3 +223,37 @@ div.popover-content {
 .test {
 /*    border: 4px dashed;*/
 }
+
+
+#mybutton {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    padding: 9px 17px;
+    border: 1px solid #0197ba;
+    border-radius: 7px;
+    background: #01f6ff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#01f6ff), to(#0197ba));
+    background: -moz-linear-gradient(top, #01f6ff, #0197ba);
+    background: linear-gradient(to bottom, #01f6ff, #0197ba);
+    text-shadow: #015f75 1px 1px 1px;
+    font: normal normal normal 17px verdana;
+    color: #ffffff;
+    text-decoration: none;
+}
+#mybutton:hover,
+#mybutton:focus {
+    border: 1px solid ##01bde9;
+    background: #01ffff;
+    background: -webkit-gradient(linear, left top, left bottom, from(#01ffff), to(#01b5df));
+    background: -moz-linear-gradient(top, #01ffff, #01b5df);
+    background: linear-gradient(to bottom, #01ffff, #01b5df);
+    color: #ffffff;
+    text-decoration: none;
+}
+#mybutton:active {
+    background: #0197ba;
+    background: -webkit-gradient(linear, left top, left bottom, from(#0197ba), to(#0197ba));
+    background: -moz-linear-gradient(top, #0197ba, #0197ba);
+    background: linear-gradient(to bottom, #0197ba, #0197ba);
+}
