@@ -62,7 +62,7 @@ $(document).ready(function(){
     });
     
     
-	$('#fatihah-container').width($('#fatihah').width());   
+//	$('#fatihah-container').width($('#fatihah').width());   
 
     
     
@@ -87,7 +87,7 @@ $(document).ready(function(){
     listKey: 'name',
      
     
-	});
+	}).parent().css({"margin":"0 auto"});
 
     
 
@@ -96,19 +96,21 @@ $(document).ready(function(){
     
     
     
-	$('area, li > a').click(function(e){
+	$('area, li > button').click(function(e){
 		e.preventDefault();
       
 		var class_name = $(this).attr('class');
         
 		var ayatnumber = class_name.split('-')[0];
 		if(!$('#'+ayatnumber+'-text').is(":visible")){
-			$('#'+ayatnumber+'-text').show(300).siblings("p").hide();
+			$('#'+ayatnumber+'-text').fadeIn();
+            $('#'+ayatnumber+'-text').siblings("div").hide();
 		}
     	
-        if($(this).prop('tagName') === 'A' && current_clicked_area != class_name){
+         console.log($(this).prop('tagName'))
+        if($(this).prop('tagName') === 'BUTTON' && current_clicked_area != class_name){
             $('area[class='+class_name+']').mapster('select');
-            console.log('area[class='+class_name+']')
+           
             current_clicked_area = class_name;
         }
 		
@@ -116,6 +118,15 @@ $(document).ready(function(){
 		
 		
 	})
+//    
+//    var text_panel_height = $('#fatihah-container').height() - $('.panel-heading').height();
+//    
+//    $('#text-panel').height(text_panel_height);
+//    
+//    console.log($('.panel-heading').height());
+//    
+    
+//    $('#main-tafsir-section').width(100vh - $('#fatihah').width())
 	
 	var hovered = false;
 	var current_hovered_object_id = "";
