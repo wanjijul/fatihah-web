@@ -2,6 +2,11 @@
 <html>
   <head>
     <meta charset="UTF-8">
+      <meta property="og:url"           content="http://79.170.44.107/revisiting-fatihah.com/" />
+	<meta property="og:type"          content="website" />
+	<meta property="og:title"         content="Revisiting Fatihah" />
+	<meta property="og:description"   content="Reinvigorate your understand of the first Sura of the Quran" />
+	<meta property="og:image"         content="http://79.170.44.107/revisiting-fatihah.com/images/icon.png" />
     <title>Revisit Al-Fatihah</title>
       
       <!-- Latest compiled and minified CSS -->
@@ -62,13 +67,13 @@
             <nav class="navbar navbar-fixed-top navbar-default transparent">  
             <div class="container-fluid top-bar" >
              <ul class="nav navbar-nav transparent">
-                 <li><button type="button" id="mybutton" class="ayat1-area">Bismillah</button></li>
-                <li><button type="button" id="mybutton" class="ayat2-area">Ayat 2</button></li>
-                <li><button type="button" id="mybutton" class="ayat3-area">Ayat 3</button></li>
-                 <li><button type="button" id="mybutton" class="ayat4-area">Ayat 4</button></li>
-                 <li><button type="button" id="mybutton" class="ayat5-area">Ayat 5</button></li>
-                 <li><button type="button" id="mybutton" class="ayat6-area">Ayat 6</button></li>
-                 <li><button type="button" id="mybutton" class="ayat7-area">Ayat 7</button></li>
+                 <li><button type="button" class="ayat1-area mybutton">Bismillah</button></li>
+                <li><button type="button" id="" class="ayat2-area mybutton ayat-button">Ayat 2</button></li>
+                <li><button type="button" class="ayat3-area mybutton">Ayat 3</button></li>
+                 <li><button type="button" class="ayat4-area mybutton">Ayat 4</button></li>
+                 <li><button type="button" class="ayat5-area mybutton">Ayat 5</button></li>
+                 <li><button type="button" class="ayat6-area mybutton">Ayat 6</button></li>
+                 <li><button type="button" class="ayat7-area mybutton">Ayat 7</button></li>
                  
                  <li> 
                      <button type="button" 
@@ -153,19 +158,18 @@
                     <div class="panel-heading">Ayat Tafseer</div>
                     <div class="panel-body panel-content">
                         <div  class="contents" id="ayat1-text" style="display:none">
-                    <ul>
-                        <li><span style="font-family: Calibri; font-size: 11.0pt; font-weight: normal; font-style: normal;">Background</span></li>
-                        </ul>
-                        <ol style="margin-left: .375in; direction: ltr; unicode-bidi: embed; margin-top: 0in; margin-bottom: 0in; font-family: Calibri; font-size: 11.0pt; font-weight: normal; font-style: normal;" type="1">
-                        <li style="margin-top: 0; margin-bottom: 0; vertical-align: middle;" value="1"><span style="font-family: Calibri; font-size: 11.0pt; font-weight: normal; font-style: normal;">First complete surah given to Rasulullah&nbsp;ﷺ.</span></li>
-                        <li style="margin-top: 0; margin-bottom: 0; vertical-align: middle;"><span style="font-family: Calibri; font-size: 11.0pt;">Fatihah will open the doors to the other parts of the Quran</span>
-                        <ol style="list-style-type: lower-roman;">
-                        <li style="margin-top: 0; margin-bottom: 0; vertical-align: middle;" value="1"><span style="font-family: Calibri; font-size: 11.0pt; font-weight: normal; font-style: normal;">That's why its always paired with other Surah in our prayers.</span></li>
-                        </ol>
-                        </li>
-                        <li><span style="font-family: Calibri; font-size: 11.0pt;">All you need to know about God is the first 3 ayaats of Al-Fatihah.</span></li>
-                        <li style="margin-top: 0; margin-bottom: 0; vertical-align: middle;"><span style="font-family: Calibri; font-size: 11.0pt;">First 3 ayats of Fatihah is the knowledge, the rest are our testimony to action.</span></li>
-                        </ol>
+                            <h2>Background</h2>
+<ol type="1">
+<li value="1">First complete surah given to Rasulullah&nbsp;ﷺ.</li>
+<li>Fatihah will open the doors to the other parts of the Quran
+<ol>
+<li value="1">That's why its always paired with other Surah in our prayers.</li>
+</ol>
+</li>
+<li>All you need to know about God is the first 3 ayaats of Al-Fatihah.</li>
+<li>First 3 ayats of Fatihah is the knowledge, the rest are our testimony to action.</li>
+</ol>
+                    
                 </div>
                 <div  class="contents"  id="ayat2-text" style="display:none">
                     <ol>
@@ -643,7 +647,13 @@
 
                     
                     </div>
-                    <div class="panel-footer">Panel Footer</div>
+                    <div class="panel-footer">
+                        
+                        <span id="text-changer">
+                          <button type="button" class="btn btn-default change-button" id="increase-size"><span class="glyphicon glyphicon-plus"></span></button><span id="text-changer-label">Font Size</span>
+                          <button type="button" class="btn btn-default change-button" id="decrease-size"><span class="glyphicon glyphicon-minus"></span></button>
+                        </span>
+                    </div>
 
 				        
                 </div>

@@ -19,9 +19,19 @@ $(document).ready(function(){
 //    });
   
     
-    var share_content = '<div class="container-fluid"><a href="http://www.facebook.com/sharer.php?u=https://simplesharebuttons.com" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a><a href="https://twitter.com/share?url=https://simplesharebuttons.com&amp;text=Simple%20Share%20Buttons&amp;hashtags=simplesharebtttons" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a><a href="https://plus.google.com/share?url=https://simplesharebuttons.com" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" /></a><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=https://simplesharebuttons.com" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn"/></a><a href="http://www.tumblr.com/share/link?url=https://simplesharebuttons.com&amp;title=Simple Share Buttons" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/tumblr.png" alt="Tumblr" /></a></div>'
+    var url = $(location).attr('href');
+    console.log(url);
+    var share_content = '<div class="container-fluid"><a href="http://www.facebook.com/sharer.php?u=' + url + '" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a><a href="https://twitter.com/share?url=' + url + ';text=Let\'s revisit our fatihah!;hashtags=revisiting-fatihah,fatihah,quran" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a><a href="https://plus.google.com/share?url=' + url + '" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" /></a><a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=' + url + '" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/linkedin.png" alt="LinkedIn"/></a><a href="http://www.tumblr.com/share/link?url='+ url +'&amp;title=Revisiting Fatihah" target="_blank" class="share-icon"><img src="https://simplesharebuttons.com/images/somacro/tumblr.png" alt="Tumblr" /></a></div>'
+    console.log(share_content);
     
 
+    $('html').on('mouseup', function(e) {
+    if(!$(e.target).closest('.popover').length) {
+        $('.popover').each(function(){
+            $(this.previousSibling).popover('hide');
+        });
+    }
+    });
     
     $('#feedback-submit').on('click', function(e){
         e.preventDefault();
@@ -94,12 +104,26 @@ $(document).ready(function(){
     var current_clicked_area = "";
     
     
+    $('.change-button').click(function(e){
+        e.preventDefault();
+        var fontSize = parseInt($('.contents').css('font-size'));
+        if($(this).attr('id') == 'increase-size'){
+            fontSize += 1;    
+        } else {
+            fontSize -= 1;
+        }
+        
+        $('.contents').css({'font-size': fontSize});
+        console.log(fontSize);
+    })
     
     
 	$('area, li > button').click(function(e){
 		e.preventDefault();
       
-		var class_name = $(this).attr('class');
+		var class_name = $(this).attr('class').split(' ')[0];
+//        console.log(class_name);
+        
         
 		var ayatnumber = class_name.split('-')[0];
 		if(!$('#'+ayatnumber+'-text').is(":visible")){
@@ -108,8 +132,7 @@ $(document).ready(function(){
             $('#'+ayatnumber+'-text').siblings("div").hide();
 		}
     	
-         console.log($(this).prop('tagName'))
-        if($(this).prop('tagName') === 'BUTTON' && current_clicked_area != class_name){
+        if($(this).hasClass('mybutton') && current_clicked_area != class_name){
             $('area[class='+class_name+']').mapster('select');
            
             current_clicked_area = class_name;
