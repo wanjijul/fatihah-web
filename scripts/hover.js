@@ -104,6 +104,7 @@ $(document).ready(function(){
 		var ayatnumber = class_name.split('-')[0];
 		if(!$('#'+ayatnumber+'-text').is(":visible")){
 			$('#'+ayatnumber+'-text').fadeIn();
+			$('#'+ayatnumber+'-text').css({'overflow-y': 'auto'});
             $('#'+ayatnumber+'-text').siblings("div").hide();
 		}
     	
