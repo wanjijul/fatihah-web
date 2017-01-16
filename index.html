@@ -61,6 +61,28 @@
 
       </div>
     </div>
+      
+<!--    Guide modal -->
+      <!-- Modal -->
+<div id="guide-modal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">How to Use This App</h4>
+      </div>
+      <div class="modal-body">
+        <p>Click on the ayats and the tafseer will be show on the panel on your right.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+
+  </div>
+</div>
 
       <div class="container-fluid">
           <div class="row-fluid ">
@@ -77,12 +99,17 @@
                  
                  <li> 
                      <button type="button" 
-                        class="btn btn-success navbar-button"
+                        class="btn btn-success navbar-button misc-buttons"
                         data-toggle="popover" id="share-button">Share</button>
                  </li>
                  <li>
                         <button type="button" 
-                        class="btn btn-success navbar-button"
+                        class="btn btn-success navbar-button misc-buttons"
+                        data-toggle="modal" data-target="#guide-modal" id="guide-button">Guide</button>
+                 </li>
+                 <li>
+                        <button type="button" 
+                        class="btn btn-success navbar-button misc-buttons"
                         data-toggle="modal" data-target="#feedback-modal" id="feedback-button">Feedback</button>
                  </li>
                  

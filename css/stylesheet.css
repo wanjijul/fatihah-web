@@ -121,7 +121,7 @@
 }
 
 .form-group {
-    margin-top: 15px;
+/*    margin-top: 15px;*/
     
     
 }
@@ -148,12 +148,11 @@
     width: 400px;
 }
 
-#feedback-button {
-    margin-left: 15px;
-}
 
-#share-button {
-    margin-left: 8px;
+
+.misc-buttons {
+    margin-left: 10px;
+    
 }
 
 #show-area {

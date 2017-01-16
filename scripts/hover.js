@@ -78,15 +78,15 @@ $(document).ready(function(){
     
    	$('#fatihah').mapster({
 	render_highlight: {
-		fillOpacity: 0.6,
-	    fillColor: "6aff3d",
+		fillOpacity: 0.4,
+	    fillColor: "7FBCEA",
 	},	
 
 	render_select: {
 		fillOpacity: 0.4,
-	    fillColor: "d42e16",
+	    fillColor: "419641",
 	    stroke: true,
-	    strokeColor: "3320FF",
+	    strokeColor: "7FBCEA",
 	    strokeOpacity: 0.8,
 	    strokeWidth: 4
 	},	
