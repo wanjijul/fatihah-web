@@ -161,7 +161,7 @@
     float: none;
     display: table-cell;
 */
-    width: 95vh;
+    width: 120vh;
     margin-top: 12vh;
 
 /*    margin-left: 20px;*/
@@ -205,6 +205,7 @@ p {
 /*    margin-top: 10vh;*/
 /*    min-height: 40vh;*/
 /*    height: inherit;*/
+
     position: absolute;
     top: 0;
     bottom: 0;
