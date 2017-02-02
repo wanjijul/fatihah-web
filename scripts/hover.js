@@ -43,7 +43,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: "POST",
-            url: '/xillia.com/email.php',
+            url: '/revisiting-fatihah.com/email.php',
             data: {
                 message: info,
                 contact: contact_addr,
@@ -97,7 +97,7 @@ $(document).ready(function(){
     listKey: 'name',
      
     
-	}).parent().css({"margin":"0 auto"});
+	})
 
     
 
@@ -142,62 +142,9 @@ $(document).ready(function(){
 		
 		
 	})
-//    
-//    var text_panel_height = $('#fatihah-container').height() - $('.panel-heading').height();
-//    
-//    $('#text-panel').height(text_panel_height);
-//    
-//    console.log($('.panel-heading').height());
-//    
-    
-//    $('#main-tafsir-section').width(100vh - $('#fatihah').width())
-	
-	var hovered = false;
-	var current_hovered_object_id = "";
-
-
-
-	// $('area').mouseover(function(e){
-	// 	e.preventDefault();
-
-	// 	// $(this).mapster('highlight');
-	// 	current_hovered_object_id = $(this).attr('id');
-
-
-	// 	var ayatnumber = $(this).attr('class');
-	// 	console.log(current_hovered_object_id);
-
-	// 	$('#'+current_hovered_object_id).mapster({
-	//         // mapKey: 'name',
-	//         singleSelect: true,
-	//         fillOpacity: 0.6,
-	//         fillColor: 'FF0000',
- //        	onMouseover: function(){
- //        		$(this).addClass('hover');
- //    	    }
-
-	//     });
-
-	// 	// ayatnumber = ayatnumber.split('-')[0];
-	// 	// if(hovered === false){
-	// 	// 	hovered = true;
-	// 	// 	$('.'+ayatnumber+'-area').mapster('highlight');
-	// 	// 	$('.'+ayatnumber+'-area').mouseover();			
-	// 	// }
-		
-	// })
-	
-	// $('area').mouseleave(function(e){
-	// 	e.preventDefault();
-	// 	console.log('left');
-	// 	// $('#'+current_hovered_object_id).mapster('highlight', false);
-	// 	// $('#fatihah').mapster('highlight',false); 
-
-	// 	hovered = false;
-	// })
 	
 	
-	
+$('#guide-modal').modal('show');	
 		
 
     
