@@ -43,7 +43,7 @@ $(document).ready(function(){
 
         $.ajax({
             type: "POST",
-            url: '/revisiting-fatihah.com/email.php',
+            url: '/email.php',
             data: {
                 message: info,
                 contact: contact_addr,
