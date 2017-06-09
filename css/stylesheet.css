@@ -1,8 +1,6 @@
 #fatihah {
-    max-width:848px;
-    max-height:1274px;
-    height: 90vh;  
 
+    height: 90vh; 
 
     display: block;
     margin-left: auto;
@@ -12,8 +10,9 @@
 
 
 #fatihah-container {
+    width: 100%
+    margin: 0px;
     margin-top: 12vh;
-    
 }
 
 
@@ -204,8 +203,6 @@ p {
 /*    margin-top: 10vh;*/
 /*    min-height: 40vh;*/
 /*    height: inherit;*/
-
-    position: absolute;
     top: 0;
     bottom: 0;
     right: 0;
